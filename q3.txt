@@ -1,0 +1,11 @@
+The best part to make into a separate component would be the
+BasicTransform. This is important to many systems like drawing,
+collisions, movement, etc., and needs to be easily accessible
+to them.
+
+The rendering system must know which sprites are "in front of"
+other sprites since compositing like this is non-commutative.
+A simple solution would be to add sprites in the order they
+should be rendered and maintain that order in drawing, but
+a more complex system may require each sprite to have a depth
+value.
